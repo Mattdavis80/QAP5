@@ -285,6 +285,10 @@ while True:
     f.write("{}, ".format(glass_cov))
     f.write("{}, ".format(loaner_car))
     f.write("{}, ".format(pay_method))
+
+# Added for QAP5
+    f.write("{}, ".format(basic_prem))
+    f.write("{}, ".format(extra_costs))
 # Last input requires a line break
     f.write("{}\n".format(str(tot_insur_premium)))
 
