@@ -67,9 +67,12 @@ for policy_data in f:
     loaner_car = (policy[12].strip())
     monthly_payment = (policy[13].strip())
 
+# If statement only taking into account records with a monthly payment
     if monthly_payment == "M":
     # Calculated Variables
         extra_costs = 0 # Initializing extra costs variable, will reset with each loop iteration
+
+        # If statements that add value to extra_costs variable if selected in records, indicated by "Y"
         if ex_liability == "Y":
             extra_costs += (num_cars * EX_LIABILITY_RATE)
         if glass_coverage == "Y":
@@ -110,8 +113,8 @@ dsp_monthly_pay_sum = "${:,.2f}".format(monthly_pay_sum)
 # Print statement for totals
 print(f"Total Policies: {tot_policies:>3d}          {dsp_total_premium_sum:>10s} {dsp_hst_sum:>10s}   {dsp_tot_cost_sum:>10s}  {dsp_monthly_pay_sum:>11s}")
 
-# # Closing file
-# f.close
+# Closing file
+f.close
 
 
 

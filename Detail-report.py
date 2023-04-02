@@ -99,7 +99,7 @@ dsp_total_premium_sum = "${:,.2f}".format(total_premium_sum)
 # Print statement for totals
 print(f"Total Policies: {tot_policies:>3d}        {dsp_insurance_prem_sum:>11s}  {dsp_extras_sum:>11s}  {dsp_total_premium_sum:>11s}")
 
-# Closing file
+# Closing file  
 f.close
 
 
